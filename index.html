@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mary Oliveira Nail Designer - Alongamento em gel, blindagem, manicure e estética das unhas. Agende seu horário!">
+    <title>Mary Oliveira | Nail Designer</title>
+
+    <!-- Google Fonts: Playfair Display (Principal) e Montserrat (Secundária) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- Cartão Principal -->
+        <section class="profile-card">
+            
+            <!-- Foto de Perfil / Logo -->
+            <div class="avatar-wrapper">
+                <img src="assets/img/perfil.jpg" alt="Mary Oliveira Nail Designer" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Mary+Oliveira&background=D4A89E&color=FFFFFF&size=256&font-size=0.35'">
+            </div>
+
+            <!-- Cabeçalho / Nome do Studio -->
+            <header class="profile-header">
+                <h1>Mary Oliveira</h1>
+                <p class="subtitle">Nail Designer</p>
+                <p class="bio">Beleza, delicadeza e alta durabilidade em cada detalhe. Realce a elegância das suas mãos.</p>
+            </header>
+
+            <!-- Botões de Ação -->
+            <nav class="links-container" aria-label="Links principais">
+                
+                <!-- Botão WhatsApp -->
+                <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20Mary!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Agendar pelo WhatsApp</span>
+                </a>
+
+                <!-- Botão Instagram -->
+                <a href="https://instagram.com/seuusuario" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram & Portfólio</span>
+                </a>
+
+                <!-- Botão Site Oficial -->
+                <a href="https://seusite.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>Site Oficial & Serviços</span>
+                </a>
+
+            </nav>
+
+            <!-- Ação Extra: Compartilhar Link -->
+            <div class="share-section">
+                <button id="copyLinkBtn" class="btn-share" title="Copiar link da página">
+                    <i class="fa-regular fa-copy"></i>
+                    <span id="copyText">Compartilhar este cartão</span>
+                </button>
+            </div>
+
+            <!-- Rodapé -->
+            <footer class="footer">
+                <p>&copy; <span id="currentYear"></span> Mary Oliveira Nail Designer. Todos os direitos reservados.</p>
+            </footer>
+
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
