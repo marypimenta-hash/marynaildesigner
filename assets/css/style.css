@@ -1,0 +1,271 @@
+/* =========================================
+   VARIÁVEIS DE CORES E TIPOGRAFIA
+   ========================================= */
+:root {
+    --cor-principal: #F8E7E1;   /* Rosê claro suave (Cartão e destaques leves) */
+    --cor-secundaria: #D4A89E;  /* Rosê queimado / Nude (Botões e bordas) */
+    --cor-apoio: #8B5E52;       /* Marrom rosado terroso (Detalhes e hover) */
+    --cor-fundo: #F7F3EF;       /* Off-white creme (Fundo geral) */
+    --cor-texto: #322A22;       /* Marrom escuro profundo (Textos) */
+    --cor-branco: #FFFFFF;
+
+    --fonte-titulo: 'Playfair Display', Georgia, serif;
+    --fonte-texto: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* =========================================
+   RESET E ESTILOS GERAIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    background-image: radial-gradient(circle at top right, var(--cor-principal) 0%, transparent 45%),
+                      radial-gradient(circle at bottom left, var(--cor-principal) 0%, transparent 45%);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   CARTÃO PRINCIPAL
+   ========================================= */
+.container {
+    width: 100%;
+    max-width: 460px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.profile-card {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-principal);
+    border-radius: 28px;
+    padding: 40px 28px 28px;
+    text-align: center;
+    box-shadow: 0 18px 40px rgba(139, 94, 82, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background: linear-gradient(135deg, var(--cor-principal), #f1d5cb);
+    z-index: 0;
+}
+
+/* =========================================
+   FOTO DE PERFIL
+   ========================================= */
+.avatar-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 122px;
+    height: 122px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-apoio));
+    box-shadow: 0 8px 20px rgba(139, 94, 82, 0.18);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--cor-branco);
+    display: block;
+}
+
+/* =========================================
+   CABEÇALHO E TIPOGRAFIA
+   ========================================= */
+.profile-header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 28px;
+}
+
+.profile-header h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.subtitle {
+    font-family: var(--fonte-titulo);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--cor-apoio);
+    font-weight: 500;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subtitle::before,
+.subtitle::after {
+    content: "";
+    height: 1px;
+    width: 24px;
+    background-color: var(--cor-secundaria);
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    opacity: 0.85;
+    max-width: 340px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* =========================================
+   BOTÕES DE LINKS
+   ========================================= */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 22px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+}
+
+.btn i {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--cor-apoio);
+    color: var(--cor-branco);
+    border: 1.5px solid var(--cor-apoio);
+    box-shadow: 0 6px 16px rgba(139, 94, 82, 0.22);
+}
+
+.btn-primary:hover {
+    background-color: #734b40;
+    border-color: #734b40;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(139, 94, 82, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    border: 1.5px solid var(--cor-secundaria);
+}
+
+.btn-secondary i {
+    color: var(--cor-apoio);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(212, 168, 158, 0.35);
+}
+
+.btn-secondary:hover i {
+    color: var(--cor-branco);
+    transform: scale(1.1);
+}
+
+/* =========================================
+   BOTÃO DE COMPARTILHAR E RODAPÉ
+   ========================================= */
+.share-section {
+    margin-bottom: 22px;
+}
+
+.btn-share {
+    background: transparent;
+    border: none;
+    color: var(--cor-apoio);
+    font-family: var(--fonte-texto);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-share:hover {
+    background-color: var(--cor-principal);
+}
+
+.footer {
+    border-top: 1px solid var(--cor-principal);
+    padding-top: 16px;
+    font-size: 0.75rem;
+    color: var(--cor-texto);
+    opacity: 0.7;
+}
+
+/* =========================================
+   ANIMAÇÕES E RESPONSIVIDADE
+   ========================================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 380px) {
+    .profile-card {
+        padding: 32px 20px 22px;
+    }
+
+    .profile-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .btn {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+    }
+}
